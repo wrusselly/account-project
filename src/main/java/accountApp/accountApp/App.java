@@ -5,6 +5,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        
+        Account a = new Account("Will", "Russell", 1);
+        
+        Service.addAccount(a);
+        Service.getAccount(1);
+        
+        
     }
 }
