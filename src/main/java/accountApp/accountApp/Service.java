@@ -32,7 +32,7 @@ public class Service {
 		return gson.fromJson(jsonString, clazz);
 	}
 	
-	public  int countByFirstName() {
+	public  int countByFirstName(String name) {
 		return 0;
 	}
 	
