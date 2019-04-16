@@ -27,7 +27,7 @@ public class AppTest
 	
 	@Test 
 	public void countByFirstName() {
-		assertEquals("Method doesn't exist", 0,  service.countByFirstName());
+		assertEquals("Method doesn't exist", 0,  service.countByFirstName("name"));
 	}
 	
 	@AfterClass
