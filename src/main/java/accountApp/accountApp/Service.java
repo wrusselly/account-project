@@ -32,8 +32,8 @@ public class Service {
 		return gson.fromJson(jsonString, clazz);
 	}
 	
-	public static void countByFirstName() {
-		
+	public  int countByFirstName() {
+		return 0;
 	}
 	
 

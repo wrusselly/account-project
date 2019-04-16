@@ -11,7 +11,8 @@ import org.junit.AfterClass;
 
 public class AppTest 
 {
-    
+	Service service = new Service();
+	
 	@BeforeClass
 	public static void setup () {
 		Account a = new Account("Will", "Russell", 1);
@@ -25,8 +26,8 @@ public class AppTest
 	}
 	
 	@Test 
-	public static void countByFirstName() {
-		assertEquals("Method doesn't exist", 0,  Service.countByFirstName());
+	public void countByFirstName() {
+		assertEquals("Method doesn't exist", 0,  service.countByFirstName());
 	}
 	
 	@AfterClass
