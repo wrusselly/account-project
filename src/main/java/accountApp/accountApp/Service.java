@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class Service {
 	
-	private static Map<Integer, Account> accountMap = new HashMap<Integer, Account>(); 
-	private Gson gson;
+	public static Map<Integer, Account> accountMap = new HashMap<Integer, Account>(); 
+	private static Gson gson;
 	
 	public static void addAccount (Account a) {
 		accountMap.put(a.getAccountNumber(), a);
@@ -22,12 +22,13 @@ public class Service {
 		System.out.println("First Name: " + fn + ", Last Name: " + ln + ", Account Number: " + accNo);
 	}
 
-	public String getJSONForObject(Object obj) {
-		
+	public static String getJSONFromObject(Object obj) {
+		gson = new Gson();
 		return gson.toJson(obj);
 	}
 
-	public <T> T getObjectForJSON(String jsonString, Class<T> clazz) {
+	public static <T> T getObjectFromJSON(String jsonString, Class<T> clazz) {
+		gson = new Gson();
 		return gson.fromJson(jsonString, clazz);
 	}
 	
