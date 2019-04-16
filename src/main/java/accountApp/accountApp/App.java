@@ -11,15 +11,15 @@ public class App
         
         Service.addAccount(a);
         Service.getAccount(1);
-        String accountString = Service.getJSONForObject(a);
+        String accountString = Service.getJSONFromObject(a);
         System.out.println(accountString);
-        Account c = Service.getObjectForJSON(accountString, Account.class);
+        Account c = Service.getObjectFromJSON(accountString, Account.class);
         System.out.println(c);
         
-        String mapString = Service.getJSONForObject(Service.accountMap);
+        String mapString = Service.getJSONFromObject(Service.accountMap);
         System.out.println(mapString);
         
-        Map<Integer, Account> map = Service.getObjectForJSON(mapString, Map.class);
+        Map<Integer, Account> map = Service.getObjectFromJSON(mapString, Map.class);
         System.out.println(map);
         
         

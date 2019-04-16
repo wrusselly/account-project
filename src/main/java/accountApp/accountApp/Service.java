@@ -22,12 +22,12 @@ public class Service {
 		System.out.println("First Name: " + fn + ", Last Name: " + ln + ", Account Number: " + accNo);
 	}
 
-	public static String getJSONForObject(Object obj) {
+	public static String getJSONFromObject(Object obj) {
 		gson = new Gson();
 		return gson.toJson(obj);
 	}
 
-	public static <T> T getObjectForJSON(String jsonString, Class<T> clazz) {
+	public static <T> T getObjectFromJSON(String jsonString, Class<T> clazz) {
 		gson = new Gson();
 		return gson.fromJson(jsonString, clazz);
 	}
