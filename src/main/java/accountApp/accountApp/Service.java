@@ -32,9 +32,12 @@ public class Service {
 		return gson.fromJson(jsonString, clazz);
 	}
 	
-	public  int countByFirstName(String name) {
-		
-		return 0;
+	public  boolean countByFirstName(String name) {
+		boolean exists =  false;
+		for (int k : accountMap.keySet()) {
+			exists = accountMap.get(k).getFirstName().equals(name);
+		}
+		return exists;
 	}
 	
 
