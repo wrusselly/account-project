@@ -27,7 +27,7 @@ public class AppTest
 	
 	@Test 
 	public void countByFirstName() {
-		assertEquals("expected value = 2", 2, service.countByFirstName("Bill"));
+		assertEquals("expected value = 2", 2, service.countByFirstName("Will"));
 	}
 	
 	@AfterClass
