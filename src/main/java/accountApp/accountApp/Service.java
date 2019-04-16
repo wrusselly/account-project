@@ -32,14 +32,14 @@ public class Service {
 		return gson.fromJson(jsonString, clazz);
 	}
 	
-	public  int  countByFirstName(String name) {
+	public  String  countByFirstName(String name) {
 		int count = 0;
 		for (int k : accountMap.keySet()) {
 			if (accountMap.get(k).getFirstName().equals(name)) {
 				count++;
 			}
 		}
-		return count;
+		return "The total number of " + name + "'s is: " + count;
 	}
 	
 
