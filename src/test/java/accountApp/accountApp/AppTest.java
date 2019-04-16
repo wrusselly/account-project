@@ -5,6 +5,8 @@ import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.junit.AfterClass;
+
 
 
 public class AppTest 
@@ -24,7 +26,12 @@ public class AppTest
 	
 	@Test 
 	public static void countByFirstName() {
-		Service.countByFirstName();
+		assertEquals("Method doesn't exist", 0,  Service.countByFirstName());
+	}
+	
+	@AfterClass
+	public static void tearDown() {
+		Service.accountMap.clear();
 	}
 	
 }
