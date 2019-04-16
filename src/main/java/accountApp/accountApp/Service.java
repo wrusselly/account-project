@@ -32,5 +32,7 @@ public class Service {
 		return gson.fromJson(jsonString, clazz);
 	}
 	
+	
+	
 
 }

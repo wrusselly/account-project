@@ -8,8 +8,10 @@ public class App
     {
         
         Account a = new Account("Will", "Russell", 1);
+        Account b = new Account("Will", "Russell", 2);
         
         Service.addAccount(a);
+        Service.addAccount(b);
         Service.getAccount(1);
         String accountString = Service.getJSONFromObject(a);
         System.out.println(accountString);
